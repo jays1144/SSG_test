@@ -1,0 +1,8 @@
+version: "3"
+services:
+  api: # 서버 도커 관련 세팅
+  nginx:
+    image: nginx
+    restart: always
+    ports:
+      - "80:80"
