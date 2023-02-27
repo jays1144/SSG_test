@@ -10,7 +10,7 @@ const AImode = ({ onClose }) => {
   const ai = function () {
     console.log("리듀스로 받아온값 :" + name);
     axios
-      .post("http://3.35.187.33:3001/aimode", {
+      .post("http://localhost:3001/aimode", {
         tl_ai: babo,
         tl_name: name,
       })

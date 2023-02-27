@@ -13,7 +13,7 @@ const Del = ({ onClose }) => {
   const onBtnCardContainer1Click = useCallback(() => {
     if (key == "123456") {
       axios
-        .post("http://3.35.187.33:3001/del", {
+        .post("http://localhost:3001/del", {
           name: name,
           key: key,
         })
@@ -23,7 +23,7 @@ const Del = ({ onClose }) => {
         .catch((err) => {
           console.log("삭제axios문제 발생 : ", err);
         });
-      window.location.href = "http://3.35.187.33:3001/main-yoo1";
+      window.location.href = "http://3.35.187.33:80/main-yoo1";
     }
   });
 

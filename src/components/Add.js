@@ -14,7 +14,7 @@ const Add = ({ onClose }) => {
 
   return (
     <form
-      action="http://3.35.187.33:3001/add"
+      action="http://localhost:3001/add"
       method="post"
       encType="multipart/form-data"
     >

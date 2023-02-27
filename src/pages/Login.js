@@ -40,12 +40,12 @@ const Login = () => {
   const log = function () {
     console.log("입력한 값 : ", key);
     axios
-      .post("http://3.35.187.33:3001/log", {
+      .post("http://localhost:3001/log", {
         key: key,
       })
       .then((res) => {
         console.log("로그인 성공 : ", res);
-        navigate("/main-yoo1");
+        window.location.href = "http://3.35.187.33:80/main-yoo1";
       })
       .catch((err) => {
         console.log("에러페이지 axios부분문제", err);
