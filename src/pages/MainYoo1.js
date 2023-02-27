@@ -105,7 +105,7 @@ const MainYoo1 = () => {
       });
     let mapContainer = document.getElementById("map"), // 지도의 중심좌표
       mapOption = {
-        center: new kakao.maps.LatLng(35.00584710345468, 126.722022616299303), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(34.99449263426358, 126.82119646675224), // 지도의 중심좌표
         level: 8, // 지도의 확대 레벨
       };
     setMap(new kakao.maps.Map(mapContainer, mapOption)); // 지도를 생성합니다
@@ -133,7 +133,6 @@ const MainYoo1 = () => {
     } else {
       displayMarker2(i);
     }
-    // displayMarker(i);
   }
 
   // 지도에 마커를 표시하는 함수입니다(AI mode off)
@@ -270,18 +269,12 @@ const MainYoo1 = () => {
       // 마커의 이미지
       image: markerImage,
     });
-    // close.push(marker);
 
     //커스텀오버레이 생성
     var CustomOverlay = new kakao.maps.CustomOverlay({
       yAnchor: 1.45,
       position: marker.getPosition(),
     });
-    // custom.push(CustomOverlay);
-    // console.log("커스텀길이 : ", custom.length);
-    // console.log("너의 데이터 타입은 : ", typeof CustomOverlay);
-    // console.log("너의 데이터 타입은22 : ", typeof custom);
-    // close.push(CustomOverlay);
 
     var Customcontent = document.createElement("div");
     Customcontent.className = "wrap";
@@ -303,11 +296,6 @@ const MainYoo1 = () => {
       CustomOverlay.setMap(null);
     };
 
-    // function closeCustom() {
-    //   for (let i = 0; i < custom.length; i++) {
-    //     CustomOverlay.setVisible(false);
-    //   }
-    // }
     contentTitle.appendChild(closeBtn);
 
     var bodyContent = document.createElement("div");
@@ -334,9 +322,6 @@ const MainYoo1 = () => {
     CustomOverlay.setContent(Customcontent);
 
     kakao.maps.event.addListener(marker, "click", function () {
-      // console.log("여기 커스텀 길이는 > ", custom.length);
-      // closeCustom();
-      // test.setMap(null);
       setData(positions[i]);
       sessionStorage.setItem("name", positions[i].title);
       let title = positions[i].title;
@@ -415,9 +400,6 @@ const MainYoo1 = () => {
     }
     return 0;
   }
-
-  // //마커클릭시 무언가를 출력하는 함수입니다.
-  // Listview();
 
   function errorlist() {
     let a, b;

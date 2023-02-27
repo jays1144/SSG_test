@@ -40,7 +40,7 @@ const Login = () => {
   const log = function () {
     console.log("입력한 값 : ", key);
     axios
-      .post("http://127.0.0.1:3001/log", {
+      .post("http://3.35.187.33:3001/log", {
         key: key,
       })
       .then((res) => {
