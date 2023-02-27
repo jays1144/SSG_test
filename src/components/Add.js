@@ -4,7 +4,7 @@ import "./Add.css";
 const Add = ({ onClose }) => {
   const [photoInfo, setPhoto] = useState("");
   const Cancel = useCallback(() => {
-    window.location.href = "http://localhost:3000/main-yoo1";
+    window.location.href = "http://3.35.187.33:80/main-yoo1";
   });
 
   function filename(e) {
@@ -14,7 +14,7 @@ const Add = ({ onClose }) => {
 
   return (
     <form
-      action="http://127.0.0.1:3001/add"
+      action="http://3.35.187.33:3001/add"
       method="post"
       encType="multipart/form-data"
     >

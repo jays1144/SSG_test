@@ -12,7 +12,7 @@ const Error1 = () => {
   useEffect(() => {
     console.log("에러페이지 useEffect실행");
     axios
-      .post("http://127.0.0.1:3001/error", {
+      .post("http://3.35.187.33:3001/error", {
         name: name,
       })
       .then((res) => {

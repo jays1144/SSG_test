@@ -10,14 +10,14 @@ const AImode = ({ onClose }) => {
   const ai = function () {
     console.log("리듀스로 받아온값 :" + name);
     axios
-      .post("http://127.0.0.1:3001/aimode", {
+      .post("http://3.35.187.33:3001/aimode", {
         tl_ai: babo,
         tl_name: name,
       })
       .then((result) => {
         setAimode(result.data.res);
         console.log(result.data.res);
-        window.location.href = "http://localhost:3000/main-yoo1";
+        window.location.href = "http://3.35.187.33:80/main-yoo1";
       })
       .catch((err) => {
         console.log("변경 안됨 : ", err);
@@ -25,7 +25,7 @@ const AImode = ({ onClose }) => {
   };
 
   const del = function () {
-    window.location.href = "http://localhost:3000/main-yoo1";
+    window.location.href = "http://3.35.187.33:80/main-yoo1";
   };
 
   console.log(aimode);

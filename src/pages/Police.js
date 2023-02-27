@@ -11,7 +11,7 @@ const Police = () => {
   useEffect(() => {
     console.log("police페이지 useEffect실행");
     axios
-      .post("http://127.0.0.1:3001/police")
+      .post("http://3.35.187.33:3001/police")
       .then((res) => {
         console.log("police 가져와짐", res.data.police);
         setInfo(res.data.police);

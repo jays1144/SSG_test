@@ -93,7 +93,7 @@ const MainYoo1 = () => {
 
   useEffect(() => {
     axios
-      .post("http://127.0.0.1:3001/main")
+      .post("http://3.35.187.33:3001/main")
       .then((res) => {
         console.log("info데이터 가져와짐", res.data.tl_info);
         setInfo(res.data.tl_info);
@@ -326,7 +326,7 @@ const MainYoo1 = () => {
       sessionStorage.setItem("name", positions[i].title);
       let title = positions[i].title;
       axios
-        .post("http://127.0.0.1:3001/problem", {
+        .post("http://3.35.187.33:3001/problem", {
           title: title,
         })
         .then((res) => {
