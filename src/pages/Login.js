@@ -36,8 +36,8 @@ const Login = () => {
   }, []);
   const url =
     process.env.NODE_ENV === "production"
-      ? "http://http://3.35.187.33:3001/"
-      : "http://localhost:3001/";
+      ? "http://3.35.187.33:3001/log"
+      : "http://localhost:3001/log";
 
   // const log = async function () {
   //   console.log("입력한 값 : ", key);
@@ -61,7 +61,7 @@ const Login = () => {
       })
       .then((res) => {
         console.log("로그인 성공 : ", res);
-        window.location.href = "http://3.35.187.33:80/main-yoo1";
+        // window.location.href = "http://3.35.187.33:80/main-yoo1";
       })
       .catch((err) => {
         console.log("에러페이지 axios부분문제", err);
