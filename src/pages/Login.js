@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import axios from "axios";
 
 const Login = () => {
-  const navigate = useNavigate();
   const [key, setKey] = useState("");
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
@@ -36,11 +34,15 @@ const Login = () => {
       }
     };
   }, []);
+  const url =
+    process.env.NODE_ENV === "production"
+      ? "http://http://3.35.187.33:3001/log"
+      : "http://localhost:3001";
 
-  const log = function () {
+  const log = async function () {
     console.log("입력한 값 : ", key);
-    axios
-      .post("http://localhost:3001/log", {
+    await axios
+      .post(url, {
         key: key,
       })
       .then((res) => {
