@@ -33,6 +33,7 @@ router.post("/log", (req, res) => {
       console.log("로그인 값 안맞아요 in router", err);
     }
   });
+  conn.end();
 });
 
 router.post("/add", upload.single("photo"), function (req, res) {
