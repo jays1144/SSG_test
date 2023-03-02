@@ -8,7 +8,7 @@ const path = require("path");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://3.35.187.33:3001", "http://localhost:3001"],
+    origin: ["http:localhost:3001"],
     credentials: true,
   })
 );

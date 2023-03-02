@@ -56,7 +56,7 @@ const Login = () => {
   const log = async function () {
     console.log("입력한 값 : ", key);
     await axios
-      .post(url, {
+      .post("http://3.35.187.33:3001/log", {
         key: key,
       })
       .then((res) => {
